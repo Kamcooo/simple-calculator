@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.App {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background: linear-gradient(rgb(7, 101, 133), rgb(255, 255, 255));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    margin: 0;
+    padding: 2rem;
+    color: #fff;
+  }
+
+  .calculator-wrapper {
+    flex-grow: 1;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+
+    .calculator {
+      background-color: #fff;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      height: 500px;
+      width: 650px;
+
+      .calculator-input {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgb(7, 101, 133);
+
+        input {
+          width: 100%;
+          border: none;
+          font-size: 30px;
+          outline: none;
+        }
+      }
+
+      .calculator-buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        button {
+          flex: 1 0 21%;
+          height: 100px;
+          border: 1px solid darken(rgb(7, 101, 133), 5%);
+          font-size: 30px;
+          max-width: 25%;
+          cursor: pointer;
+        }
+
+        .button-number {
+          background-color: #fff;
+          &:hover{
+            background-color:darken(#fff,2%);
+            transition: background-color 0.2s;
+          }
+        }
+
+        .button-action {
+          background-color: rgb(7, 101, 133);
+          color: #fff;
+          &:hover{
+            background-color:darken(rgb(7, 101, 133),5%);
+          }
+        }
+      }
+    }
+  }
+}
